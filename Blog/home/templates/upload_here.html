@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block start %}
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" required name='files'>
+        <button type="submit" class="btn btn-primary mt-4" onclick=Clicked() >Upload</button>
+    </form>
+
+    <script>
+        function Clicked(){
+            alert("File Succesfully Upload to Database")
+        }
+    </script>
+{% endblock %}
